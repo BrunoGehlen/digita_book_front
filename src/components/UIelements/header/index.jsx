@@ -5,6 +5,7 @@ import {
   SearchInput,
   SearchButton,
   ProfileContainer,
+  TitleContainer,
 } from "./style";
 import { RiBook3Fill } from "react-icons/ri";
 import { MdPerson } from "react-icons/md";
@@ -15,21 +16,15 @@ const Header = () => {
   return (
     <>
       <MainContainer>
-        <RiBook3Fill size="3.5rem" />
-        <Title>DIGITABOOK</Title>
-        <SearchContainer>
-          <SearchInput
-            label="pesquisa"
-            name="pesquisa"
-            variant="outlined"
-            placeholder="oque vc procura"
-          />
-        </SearchContainer>
+        <TitleContainer>
+          <RiBook3Fill size="3.5rem" />
+          <Title>DIGITABOOK</Title>
+        </TitleContainer>
         <ProfileContainer>
           <MdPerson size="3rem" />
           <p>Login ou cadastro</p>
         </ProfileContainer>
-        <FaShoppingCart />
+        <FaShoppingCart size="2.5rem" />
       </MainContainer>
     </>
   );

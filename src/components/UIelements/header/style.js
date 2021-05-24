@@ -6,9 +6,29 @@ export const MainContainer = styled.div`
   width: 100%;
   height: 10vh;
   background-color: yellow;
+  position: fixed;
+  top: 0;
 
   display: flex;
   align-items: center;
+
+  @media (max-width: 400px) {
+    flex-direction: column;
+    align-items: center;
+    height: 800px;
+  }
+`;
+
+export const TitleContainer = styled.div`
+  width: 23.33%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  @media (max-width: 400px) {
+    h1 {
+      font-size: 20px;
+    }
+  }
 `;
 
 export const Title = styled.h1`
@@ -19,7 +39,7 @@ export const Title = styled.h1`
 `;
 
 export const SearchContainer = styled.div`
-  width: 40rem;
+  width: 33.33%;
   height: 10vh;
 
   display: flex;
@@ -34,7 +54,6 @@ export const SearchButton = styled.button`
 
 export const SearchInput = styled(TextField)`
   width: 30rem;
-  height: 8vh;
   background: white;
   input:-webkit-autofill,
   input:-webkit-autofill:hover,
@@ -59,7 +78,7 @@ export const SearchInput = styled(TextField)`
 `;
 
 export const ProfileContainer = styled.div`
-  width: 10rem;
+  width: 33.33%;
   height: 8vh;
 
   display: flex;
