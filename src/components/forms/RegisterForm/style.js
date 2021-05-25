@@ -48,49 +48,15 @@ export const InputLayout = styled.div`
 `
 
 export const Inputs = styled.form`
-    margin-top: 4vh;
-    height: 24vh;
+    height: 45vh;
     display: flex;
     flex-flow: column;
     justify-content: space-between;
 `
+
 export const LoginButton = styled(Button)`
     width: 100%;
     height: 6.5vh;
     font-size: 2.6vh;
     margin: 4vh 0 0 0;
-`
-
-export const SocialLoginStyles = styled.div`
-    margin-top: 60px;
-    
-    width:100%;
-
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-
-
-    @media screen and (min-width: 680px) {
-        > button {
-            max-width: 36vw;
-        }
-    }
-
-    @media screen and (min-width: 1023px) {
-        > button {
-            max-width: 36vw;
-        }
-    }
-
-    @media screen and (min-width: 1439px) {
-        > button {
-            max-width: 14vw;
-        }
-    }
-
-`
-
-export const SocialLinks = styled.footer`
-
 `
