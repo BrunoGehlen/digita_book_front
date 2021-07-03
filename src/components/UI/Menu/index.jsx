@@ -17,14 +17,14 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
-import {VscAccount} from "react-icons/vsc"
-import {FaHandsHelping, FaGlasses, FaGlassCheers} from "react-icons/fa"
-import {GoSettings} from "react-icons/go"
-import {AiFillWechat} from "react-icons/ai"
-import {RiLightbulbLine} from "react-icons/ri"
-import {BiHelpCircle} from "react-icons/bi"
-import {ImExit} from "react-icons/im"
-import {useHistory} from "react-router-dom"
+import { VscAccount } from "react-icons/vsc"
+import { FaHandsHelping, FaGlasses, FaGlassCheers } from "react-icons/fa"
+import { GoSettings } from "react-icons/go"
+import { AiFillWechat } from "react-icons/ai"
+import { RiLightbulbLine } from "react-icons/ri"
+import { BiHelpCircle } from "react-icons/bi"
+import { ImExit } from "react-icons/im"
+import { useHistory } from "react-router-dom"
 
 const drawerWidth = 240;
 
@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
   },
   appBar: {
     zIndex: theme.zIndex.drawer + 1,
-    backgroundColor:("#283F3B"),
+    backgroundColor: ("#283F3B"),
     color: "#D8973C",
     transition: theme.transitions.create(['width', 'margin'], {
       easing: theme.transitions.easing.sharp,
@@ -43,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
   },
   appBarShift: {
     marginLeft: drawerWidth,
-    backgroundColor:("#283F3B"),
+    backgroundColor: ("#283F3B"),
     color: "#D8973C",
     width: `calc(100% - ${drawerWidth}px)`,
     transition: theme.transitions.create(['width', 'margin'], {
@@ -63,17 +63,19 @@ const useStyles = makeStyles((theme) => ({
     whiteSpace: 'nowrap',
   },
   drawerOpen: {
-    backgroundColor:("#283F3B"),
+    backgroundColor: ("#283F3B"),
     color: "#D8973C",
     width: drawerWidth,
+    paddingTop: "1rem",
     transition: theme.transitions.create('width', {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.enteringScreen,
     }),
   },
   drawerClose: {
-    backgroundColor:("#283F3B"),
+    backgroundColor: ("#283F3B"),
     color: "#D8973C",
+    paddingTop: "1rem",
     transition: theme.transitions.create('width', {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
@@ -90,7 +92,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'flex-end',
     padding: theme.spacing(0, 1),
     // necessary for content to be below app bar
-    ...theme.mixins.toolbar,
+    // ...theme.mixins.toolbar,
   },
   content: {
     flexGrow: 1,
@@ -133,7 +135,7 @@ export default function MiniDrawer() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap>
+          <Typography onClick={() => history.push("/")} variant="h6" noWrap>
             Digitabook
           </Typography>
         </Toolbar>
@@ -158,49 +160,49 @@ export default function MiniDrawer() {
         </div>
         <Divider />
         <List>
-            <ListItem button key={"Minha Conta"}>
-              <ListItemIcon onClick={() => history.push("/Acount")} ><VscAccount color="#D8973C" size="1.5rem" /></ListItemIcon>
-              <ListItemText primary={"Minha Conta"} />
-            </ListItem>
-            <ListItem button key={"Nos Doe PLS"}>
-              <ListItemIcon><FaHandsHelping color="#D8973C" size="1.5rem" /></ListItemIcon>
-              <ListItemText primary={"Nos Doe PLS"} />
-            </ListItem>
-            <ListItem button key={"Configuracoes"}>
-              <ListItemIcon><GoSettings color="#D8973C" size="1.5rem" /></ListItemIcon>
-              <ListItemText primary={"Configuracoes"} />
-            </ListItem>
+          <ListItem onClick={() => history.push("/acount")} button key={"Minha Conta"}>
+            <ListItemIcon  ><VscAccount color="#D8973C" size="1.5rem" /></ListItemIcon>
+            <ListItemText primary={"Minha Conta"} />
+          </ListItem>
+          <ListItem button key={"Nos Doe PLS"}>
+            <ListItemIcon><FaHandsHelping color="#D8973C" size="1.5rem" /></ListItemIcon>
+            <ListItemText primary={"Nos Doe PLS"} />
+          </ListItem>
+          <ListItem button key={"Configuracoes"}>
+            <ListItemIcon><GoSettings color="#D8973C" size="1.5rem" /></ListItemIcon>
+            <ListItemText primary={"Configuracoes"} />
+          </ListItem>
         </List>
         <Divider />
         <List>
-            <ListItem button key={"Continue Lendo"}>
-              <ListItemIcon><FaGlasses color="#D8973C" size="1.5rem" /></ListItemIcon>
-              <ListItemText primary={"Continue Lendo"} />
-            </ListItem>
-            <ListItem button key={"Grupos De Leitura"}>
-              <ListItemIcon><FaGlassCheers color="#D8973C" size="1.5rem" /></ListItemIcon>
-              <ListItemText primary={"Grupos De Leitura"} />
-            </ListItem>
-            <ListItem button key={"Discussoes"}>
-              <ListItemIcon><AiFillWechat color="#D8973C" size="1.5rem" /></ListItemIcon>
-              <ListItemText primary={"Discussoes"} />
-            </ListItem>
-            
+          <ListItem button key={"Continue Lendo"}>
+            <ListItemIcon><FaGlasses color="#D8973C" size="1.5rem" /></ListItemIcon>
+            <ListItemText primary={"Continue Lendo"} />
+          </ListItem>
+          <ListItem button key={"Grupos De Leitura"}>
+            <ListItemIcon><FaGlassCheers color="#D8973C" size="1.5rem" /></ListItemIcon>
+            <ListItemText primary={"Grupos De Leitura"} />
+          </ListItem>
+          <ListItem button key={"Discussoes"}>
+            <ListItemIcon><AiFillWechat color="#D8973C" size="1.5rem" /></ListItemIcon>
+            <ListItemText primary={"Discussoes"} />
+          </ListItem>
+
         </List>
         <Divider />
         <List>
-            <ListItem button key={"Sugestoes"}>
-              <ListItemIcon><RiLightbulbLine color="#D8973C" size="1.5rem" /></ListItemIcon>
-              <ListItemText primary={"Sugestoes"} />
-            </ListItem>
-            <ListItem button key={"Ajuda"}>
-              <ListItemIcon><BiHelpCircle color="#D8973C" size="1.5rem" /></ListItemIcon>
-              <ListItemText primary={"Ajuda"} />
-            </ListItem>
-            <ListItem button key={"Deslogar"}>
-              <ListItemIcon><ImExit color="#D8973C" size="1.5rem" /></ListItemIcon>
-              <ListItemText primary={"Deslogar"} />
-            </ListItem>
+          <ListItem button key={"Sugestoes"}>
+            <ListItemIcon><RiLightbulbLine color="#D8973C" size="1.5rem" /></ListItemIcon>
+            <ListItemText primary={"Sugestoes"} />
+          </ListItem>
+          <ListItem button key={"Ajuda"}>
+            <ListItemIcon><BiHelpCircle color="#D8973C" size="1.5rem" /></ListItemIcon>
+            <ListItemText primary={"Ajuda"} />
+          </ListItem>
+          <ListItem button key={"Deslogar"}>
+            <ListItemIcon><ImExit color="#D8973C" size="1.5rem" /></ListItemIcon>
+            <ListItemText primary={"Deslogar"} />
+          </ListItem>
         </List>
       </Drawer>
       <main className={classes.content}>
