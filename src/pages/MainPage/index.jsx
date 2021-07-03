@@ -10,7 +10,6 @@ const MainPage = () => {
             <ContentContainer>
                 <DiscussionCard />
             </ContentContainer>
-            
         </MainContainerPage>
     </>)
 }
