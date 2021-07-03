@@ -1,11 +1,13 @@
-import Header from "../../components/UIelements/header";
+import {MainContainerPage} from "./style"
+
+import MiniDrawer from "../../components/UI/Menu"
 
 const MainPage = () => {
-  return (
-    <>
-      <Header />
-    </>
-  );
-};
+    return (<>
+        <MainContainerPage>
+            <MiniDrawer />
+        </MainContainerPage>
+    </>)
+}
 
-export default MainPage;
+export default MainPage
