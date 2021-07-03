@@ -8,6 +8,5 @@ export const MainContainerPage = styled.div`
 
 export const ContentContainer = styled.div`
     width: 90%;
-    height: calc(90vh - 1px);
-    padding-left: 10%;
+    padding-left: 7%;
 `
