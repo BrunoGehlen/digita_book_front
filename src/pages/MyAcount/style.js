@@ -2,14 +2,19 @@ import styled from "styled-components"
 
 export const MainContainerPage = styled.div`
     width: 100%;
-    height: 100vh;
+    height: 89.9vh;
     background-color: #232323;
+    margin: 0;
+    padding: 0;
 `
 
 export const MyProfileContainer = styled.div`
     width: 100%;
     height: 89.9vh;
     background-color: white;
+
+    margin: 0;
+    padding: 0;
 `
 
 export const InfoContainer = styled.div`
@@ -20,6 +25,9 @@ export const InfoContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    margin: 0;
+    padding: 0;
 `
 
 export const ProfileImg = styled.img`

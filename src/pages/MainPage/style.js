@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const MainContainerPage = styled.div`
     width: 100%;
-    height: 100vh;
+    height: 89.9vh;
     background-color: #cccccc;
 `
 

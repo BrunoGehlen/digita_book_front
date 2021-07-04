@@ -26,6 +26,11 @@ import { BiHelpCircle } from "react-icons/bi"
 import { ImExit } from "react-icons/im"
 import { useHistory } from "react-router-dom"
 
+import { useSelector } from "react-redux";
+
+
+import {Button} from "./style"
+
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
@@ -101,6 +106,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function MiniDrawer() {
+  const color = useSelector((state) => state.theme)
   const history = useHistory()
   const classes = useStyles();
   const theme = useTheme();
@@ -138,6 +144,7 @@ export default function MiniDrawer() {
           <Typography onClick={() => history.push("/")} variant="h6" noWrap>
             Digitabook
           </Typography>
+          <Button>Test</Button>
         </Toolbar>
       </AppBar>
       <Drawer

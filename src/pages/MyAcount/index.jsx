@@ -4,7 +4,8 @@ import { MainContainerPage, MyProfileContainer, InfoContainer, ProfileImg, Profi
 import MiniDrawer from "../../components/UI/Menu"
 
 const MyAcount = () => {
-    return (<MainContainerPage>
+    return (
+    <MainContainerPage>
         <MyProfileContainer>
             <InfoContainer>
                 <ProfileImg src="https://picsum.photos/200/300"></ProfileImg>
